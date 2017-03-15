@@ -30,9 +30,7 @@ k=20
 passcode = bytearray(p)
 for i in (11, 17, 23, 29):
     passcode[i] = crypted_string[k]
-    k = k+1
-# for j in range(len(p)):
-#     print(hex(p[j]), end=' ')
+    k += 1
 print (binascii.hexlify(bytearray(p)))
 print (binascii.hexlify(bytearray(passcode)))
 #encobj = AES.new(key,mode,iv)
