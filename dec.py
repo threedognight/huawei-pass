@@ -24,7 +24,6 @@ print('\n')
 print(binascii.hexlify(n))
 print(binascii.hexlify(crypted_string))
 print(hex(a1)+' '+hex(a2)+' '+hex(a3)+' '+hex(a4))
-#print (format(a1, '04X')+format(a2, '04X')+format(a3, '04X')+format(a4, '04X'))
 print(binascii.hexlify(struct.pack("<L", a1))+binascii.hexlify(struct.pack("<L", a2))+binascii.hexlify(struct.pack("<L", a3))+binascii.hexlify(struct.pack("<L", a4)))
 k=20
 passcode = bytearray(p)
