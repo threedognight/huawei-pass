@@ -1,5 +1,6 @@
 # from Crypto.Cipher import AES
-import binascii, struct
+import binascii
+import struct
 
 # n = bytearray(b'p"VBAQ9<R;`t}XRO^MgR!%!!')
 # n = bytearray(b'RT0}%[uVW16%Zb~-d5zONyx!')
@@ -32,10 +33,10 @@ print(hex(a1) + ' ' + hex(a2) + ' ' + hex(a3) + ' ' + hex(a4))
 print(binascii.hexlify(struct.pack("<L", a1)) + binascii.hexlify(struct.pack("<L", a2)) + binascii.hexlify(
     struct.pack("<L", a3)) + binascii.hexlify(struct.pack("<L", a4)))
 k = 20
-passcode = bytearray(p)
+pass_ECB = bytearray(p)
 for i in (11, 17, 23, 29):
-    passcode[i] = crypted_string[k]
+    pass_ECB[i] = crypted_string[k]
     k += 1
 print(binascii.hexlify(bytearray(p)))
-print(binascii.hexlify(bytearray(passcode)))
+print(binascii.hexlify(bytearray(pass_ECB)))
 # encobj = AES.new(key,mode,iv)
